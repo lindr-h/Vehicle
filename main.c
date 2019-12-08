@@ -25,9 +25,12 @@ int main(void) {
 	SystemInit();
 	PeripheralInit();
 
+	VehicleInit();
+
 	while (1)
 	{
-		
+		VehicleStatusUpdate();
+		VehicleDisplays();		
 	}
 }
 
