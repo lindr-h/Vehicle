@@ -26,5 +26,8 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemInit(void);
 void PeripheralInit(void);
+void ExitInit(void);
+void EINT0_Enable(int flag);
+void EINT2_Enable(int flag);
 
 /* Private functions ---------------------------------------------------------*/
