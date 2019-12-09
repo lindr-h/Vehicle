@@ -19,10 +19,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 Vehicle vehicle = {
-	.position = 90,
-	.speed = 0,
-	.laps = 0,
-	.gear = 0}; /* 赛车结构体 */
+	90, 0, 0, 2}; /* 赛车结构体 */
 
 /* Private functions ---------------------------------------------------------*/
 void VehicleInit(void)
@@ -33,6 +30,7 @@ void VehicleInit(void)
 
 	/* 绘制跑道 */
 	DrawTrack();
+	DrawTrack();
 
 	/* 绘制赛车 */
 	DrawVehicle(90, VEHICLE_COLOR);
@@ -40,19 +38,19 @@ void VehicleInit(void)
 
 void VehicleStatusUpdate(void)
 {
-	static int position_index;
 	static int led_index;
+	static unsigned char led_switch = 0;
 
 	/* 赛车前进 ****************************************************************/
 	/* 清除赛车当前位置 */
 	DrawVehicle(vehicle.position, 0xffffff);
 
 	/* 赛车位置前进 */
-	if (vehicle.speed < vehicle.gear * 30)
-	{
-		vehicle.speed = vehicle.gear * 30;
-		/* 后续改为根据加速度递增 */
-	}
+	//if (vehicle.speed < vehicle.gear * 10)
+	//{
+	vehicle.speed = vehicle.gear * 10;
+	/* 后续改为根据加速度递增 */
+	//}
 	vehicle.position += vehicle.speed;
 
 	/* 圈数增加 ****************************************************************/
@@ -64,17 +62,18 @@ void VehicleStatusUpdate(void)
 
 	/* 转换灯状态 **************************************************************/
 	/* 30 为档位放大系数，闪烁频率与档位呈正相关 */
-	if (led_index < vehicle.gear * 30)
+	if (led_index < (4 - vehicle.gear) * 10)
 	{
 		led_index++;
+		/* LED显示 */
+		LED_TOGGLE(led_switch);
 	}
-	else if (led_index == 0)
+	else if (led_index == (4 - vehicle.gear) * 10)
 	{
 		led_index = 0;
 
-		/****************
-		 * LED_TOGGLE() * 
-		 ****************/
+		/* 反转LED状态 */
+		led_switch = (led_switch == 1) ? 0 : 1;
 	}
 }
 
@@ -95,11 +94,35 @@ void DisplayLED(void)
 	 * 第二位：vehicle.laps % 10
 	 **********************/
 
+	choose_position(0, vehicle.laps / 10, 0);
+	//delay(5);
+	choose_position(1, vehicle.laps % 10, 0);
+	//delay(5);
+
 	/***************************
 	 * 数码管后两位显示当前速度 * 
 	 * 第一位：vehicle.speed / 10
 	 * 第二位：vehicle.speed % 10
 	 **************************/
+	choose_position(2, vehicle.speed / 10, 0);
+	//delay(5);
+	choose_position(3, vehicle.speed % 10, 0);
+	//delay(5);
+}
+
+void LED_TOGGLE(int flag)
+{
+
+	if (flag == 1) //led on
+	{
+		rGPFDAT &= ~(1 << 7);
+		rGPFDAT &= ~(1 << 4);
+	}
+	else //led off
+	{
+		rGPFDAT |= 1 << 7;
+		rGPFDAT |= 1 << 4;
+	}
 }
 
 /**
@@ -108,10 +131,18 @@ void DisplayLED(void)
  */
 void DrawTrack(void)
 {
-	int i;
+	int i, j;
 
 	for (i = 0; i <= 360; i++)
 	{
+		for (j = TRACK_WIDTH_HALF - 1; j > -TRACK_WIDTH_HALF; j--)
+		{
+			setpixel(TRACK_CENTRE_X + (TRACK_RADIUS + j) * cos(i * PI / 180.0f),
+					 TRACK_CENTRE_Y + (TRACK_RADIUS + j) * sin(i * PI / 180.0f),
+					 0xffffff); /* 绘制白色内道 */
+		}
+
+		/* 绘制黑色内圈与外圈描边 */
 		/* 用弧度表示角度，1度= Π/180（rad) */
 		setpixel(TRACK_CENTRE_X + (TRACK_RADIUS + TRACK_WIDTH_HALF) * cos(i * PI / 180.0f),
 				 TRACK_CENTRE_Y + (TRACK_RADIUS + TRACK_WIDTH_HALF) * sin(i * PI / 180.0f),
@@ -135,24 +166,54 @@ void DrawVehicle(float p, COLOR c)
 	{
 		for (j = -VEHICLE_WIDTH_HALF; j < VEHICLE_WIDTH_HALF; j++)
 		{
-			setpixel(TRACK_CENTRE_X + (TRACK_RADIUS + TRACK_WIDTH_HALF) * cos(p * PI / 180.0f) + i,
-					 TRACK_CENTRE_X + (TRACK_RADIUS + TRACK_WIDTH_HALF) * sin(p * PI / 180.0f) + j,
+			setpixel(TRACK_CENTRE_X + TRACK_RADIUS * cos(p * PI / 180.0f) + i,
+					 TRACK_CENTRE_Y + TRACK_RADIUS * sin(p * PI / 180.0f) + j,
 					 c);
 		}
 	}
 }
 
-void INT1_Handler(void)
+void __irq INT1_Handler(void)
 {
-	vehicle.gear++;
+	if (vehicle.gear < 4)
+	{
+		vehicle.gear++;
+	}
+	ClearInt();
 }
 
-void INT0_Handler(void)
+void __irq INT0_Handler(void)
 {
 	if (vehicle.gear > 0)
 	{
 		vehicle.gear--;
 	}
+	ClearInt();
+}
+void choose_position(int p, int num, int dot)
+{
+	switch (p)
+	{
+	case 0:
+		rGPGDAT &= ~(1 << 2); // 设置数码管的位选 GPG2 = 1  （COM1）
+		rGPEDAT &= ~(1 << 9); // 设置数码管的位选 GPE9 = 1（COM2）
+		break;
+	case 1:
+		rGPGDAT |= (1 << 2);  // 设置数码管的位选 GPG2 = 1  （COM1）
+		rGPEDAT &= ~(1 << 9); // 设置数码管的位选 GPE9 = 1（COM2）
+		break;
+	case 2:
+		rGPGDAT &= ~(1 << 2); // 设置数码管的位选 GPG2 = 1  （COM1）
+		rGPEDAT |= (1 << 9);  // 设置数码管的位选 GPE9 = 1（COM2）
+		break;
+	case 3:
+		rGPGDAT |= (1 << 2); // 设置数码管的位选 GPG2 = 1  （COM1）
+		rGPEDAT |= (1 << 9); // 设置数码管的位选 GPE9 = 1（COM2）
+		break;
+	}
+
+	rGPEDAT = (rGPEDAT & ~(0x3C00)) | (num << 10); // 对应数字(6)
+	rGPHDAT = (rGPHDAT & ~(1 << 8)) | (dot << 8);
 }
 
 /********************************** END OF FILE *******************************/
