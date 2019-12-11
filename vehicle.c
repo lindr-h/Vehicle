@@ -30,7 +30,6 @@ void VehicleInit(void)
 
 	/* 绘制跑道 */
 	DrawTrack();
-	DrawTrack();
 
 	/* 绘制赛车 */
 	DrawVehicle(90, VEHICLE_COLOR);
