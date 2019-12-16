@@ -1,10 +1,10 @@
 /**
  * ******************************************************************************
  * @file main.c
- * @author Gump
+ * @author Gump, LDR
  * @version V0.1
  * @date 2019-12-08
- * @brief 汽车模拟控制程序主函数源文件
+ * @brief 赛车模拟控制程序主函数源文件
  * 
  * ******************************************************************************
  */
@@ -23,11 +23,16 @@
 int main(void)
 {
 
+	/* 系统初始化 */
 	SystemInit();
 	PeripheralInit();
 	ExitInit();
-	VehicleInit();
 
+	/* 显示小组成员信息 */
+	ShowCover();
+
+	/* 赛车模拟控制主程序 */
+	VehicleInit();
 	while (1)
 	{
 		VehicleStatusUpdate();
@@ -59,6 +64,10 @@ void PeripheralInit(void)
 	LcdHorizontal(); //横屏
 }
 
+/**
+ * @brief 中断初始化
+ * 
+ */
 void ExitInit(void)
 {
 
@@ -68,7 +77,7 @@ void ExitInit(void)
 	ISRVector[0] = INT0_Handler; // 中断0处理函数
 
 	EINT2_Enable(True);
-	ISRVector[2] = INT1_Handler; // 中断2处理函数
+	ISRVector[2] = INT2_Handler; // 中断2处理函数
 
 	/* LED 配置 */
 	rGPFCON |= ((1 << 8) | (1 << 14)); //set GPF4,GPF7 为输出管脚
@@ -88,7 +97,21 @@ void ExitInit(void)
 }
 
 /**
- *中断0使能函数
+ * @brief 在LCD上显示成员信息，持续一段时间
+ * 
+ */
+void ShowCover(void) {
+
+	unsigned char *ptr = (unsigned char *)COVER_BUF;
+	ShowImage(ptr, 0, 0, 1);
+	
+	delay(5000);
+}
+
+/**
+ * @brief 中断0使能函数
+ * 
+ * @param flag 使能标志
  */
 void EINT0_Enable(int flag)
 {
@@ -108,7 +131,9 @@ void EINT0_Enable(int flag)
 }
 
 /**
- *中断2使能函数
+ * @brief 中断2使能函数
+ * 
+ * @param flag 使能标志
  */
 void EINT2_Enable(int flag)
 {

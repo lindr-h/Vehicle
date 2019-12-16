@@ -1,7 +1,7 @@
 /**
  * ******************************************************************************
  * @file vehicle.h
- * @author Gump
+ * @author Gump, LDR
  * @version V0.1
  * @date 2019-12-08
  * @brief 赛车模拟控制程序源文件
@@ -24,6 +24,11 @@ Vehicle vehicle = {
 unsigned char display_flag = 0;
 
 /* Private functions ---------------------------------------------------------*/
+
+/**
+ * @brief 赛车程序初始化函数
+ * 
+ */
 void VehicleInit(void)
 {
 	/* 绘制跑道背景图 */
@@ -37,6 +42,10 @@ void VehicleInit(void)
 	DrawVehicle(90, VEHICLE_COLOR);
 }
 
+/**
+ * @brief 更新赛车数据
+ * 
+ */
 void VehicleStatusUpdate(void)
 {
 	static int led_index;
@@ -59,14 +68,20 @@ void VehicleStatusUpdate(void)
 	{
 		vehicle.position -= 360;
 		vehicle.laps++;
+		/* 每五圈就在数码管上显示当前圈数 */
 		if (((vehicle.laps) % 5) == 0)
 		{
 			display_flag = 1;
 		}
+		/* 只显示两位圈数 */
+		if (vehicle.lap >= 100)
+		{
+			vehicle.lap -= 100;
+		}
 	}
 
 	/* 转换灯状态 **************************************************************/
-	/* 30 为档位放大系数，闪烁频率与档位呈正相关 */
+	/* 3 为档位放大系数，闪烁频率与档位呈正相关 */
 	if (led_index < (4 - vehicle.gear) * 3)
 	{
 		led_index++;
@@ -82,11 +97,15 @@ void VehicleStatusUpdate(void)
 	}
 }
 
+/**
+ * @brief 显示赛车状态
+ * 
+ */
 void VehicleDisplays(void)
 {
 	/* 绘制赛车 */
-
 	DrawVehicle(vehicle.position, VEHICLE_COLOR);
+
 	/* 显示圈数与速度*/
 	if (display_flag != 0)
 	{
@@ -95,25 +114,29 @@ void VehicleDisplays(void)
 	}
 }
 
+/**
+ * @brief 数码管显示函数 在左边两位显示当前已走圈数
+ * 
+ */
 void DisplayLED(void)
 {
 	unsigned int i;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 100; i++) /* 显示一段时间 */
 	{
 		/***********************
 		 * 数码管前两位显示圈数 *
 		 * 第一位：vehicle.laps / 10
 		 * 第二位：vehicle.laps % 10
 		 **********************/
-
 		choose_position(0, vehicle.laps / 10, 0);
 		delay(5);
 		choose_position(1, vehicle.laps % 10, 0);
 		delay(5);
 	}
+
+	/* 显示完后清除数码管数据 */
 	choose_position(0, 15, 0);
-	//delay(5);
 	choose_position(1, 15, 0);
 
 	/***************************
@@ -130,6 +153,11 @@ void DisplayLED(void)
 */
 }
 
+/**
+ * @brief LED 显示函数
+ * 
+ * @param flag 控制标志
+ */
 void LED_TOGGLE(int flag)
 {
 
@@ -162,14 +190,14 @@ void DrawTrack(void)
 					 0xffffff); /* 绘制白色内道 */
 		}
 
-		/* 绘制黑色内圈与外圈描边 */
+		/* 绘制黑色赛道描边 */
 		/* 用弧度表示角度，1度= Π/180（rad) */
 		setpixel(TRACK_CENTRE_X + (TRACK_RADIUS + TRACK_WIDTH_HALF) * cos(i * PI / 180.0f),
 				 TRACK_CENTRE_Y + (TRACK_RADIUS + TRACK_WIDTH_HALF) * sin(i * PI / 180.0f),
-				 TRACK_COLOR); /* 绘制外圈 */
+				 TRACK_COLOR); /* 绘制外描边 */
 		setpixel(TRACK_CENTRE_X + (TRACK_RADIUS - TRACK_WIDTH_HALF) * cos(i * PI / 180.0f),
 				 TRACK_CENTRE_Y + (TRACK_RADIUS - TRACK_WIDTH_HALF) * sin(i * PI / 180.0f),
-				 TRACK_COLOR); /* 绘制内圈 */
+				 TRACK_COLOR); /* 绘制内描边 */
 	}
 }
 
@@ -182,6 +210,7 @@ void DrawVehicle(float p, COLOR c)
 {
 	int i, j;
 
+	/* 以矩形的几何中心为定位点，从左上角到右下角绘制矩形 */
 	for (i = -VEHICLE_WIDTH_HALF; i < VEHICLE_WIDTH_HALF; i++)
 	{
 		for (j = -VEHICLE_WIDTH_HALF; j < VEHICLE_WIDTH_HALF; j++)
@@ -193,9 +222,13 @@ void DrawVehicle(float p, COLOR c)
 	}
 }
 
-void __irq INT1_Handler(void)
+/**
+ * @brief 按键2中断处理函数 每按一次档位自增1
+ * 
+ */
+void __irq INT2_Handler(void)
 {
-	if (vehicle.gear < 4)
+	if (vehicle.gear < 3)
 	{
 		vehicle.gear++;
 	}
@@ -203,6 +236,10 @@ void __irq INT1_Handler(void)
 	ClearInt();
 }
 
+/**
+ * @brief 按键1中断处理函数 每按一次档位自减1
+ * 
+ */
 void __irq INT0_Handler(void)
 {
 	if (vehicle.gear > 0)
@@ -212,6 +249,17 @@ void __irq INT0_Handler(void)
 
 	ClearInt();
 }
+
+/**
+ * @brief 数码管显示函数
+ * 
+ * @param p 数字在数码管中的位置
+ * 		@arg 0..3 从右到左依次为 0 ~ 3 位
+ * @param num 要显示的数字
+ * @param dot 是否显示小数点
+ * 		@arg 0 不显示小数点
+ * 		@arg 1 显示小数点
+ */
 void choose_position(int p, int num, int dot)
 {
 	switch (p)
@@ -237,6 +285,12 @@ void choose_position(int p, int num, int dot)
 	rGPEDAT = (rGPEDAT & ~(0x3C00)) | (num << 10); // 对应数字(6)
 	rGPHDAT = (rGPHDAT & ~(1 << 8)) | (dot << 8);
 }
+
+/**
+ * @brief 简单的延时函数
+ * 
+ * @param time 延时次数
+ */
 void delay(int time)
 {
 	int i, j;

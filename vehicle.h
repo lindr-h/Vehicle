@@ -1,7 +1,7 @@
 /**
  * ******************************************************************************
  * @file vehicle.h
- * @author Gump
+ * @author Gump, LDR
  * @version V0.1
  * @date 2019-12-08
  * @brief 赛车模拟控制程序头文件
@@ -30,14 +30,15 @@
 typedef struct
 {
 	float position;				 /* 赛车位置：用角度表示，取值为0 ~ 360 */
-	unsigned char speed;		 /* 赛车速度：当前最大速度 = 档位(gear) × 30 */
+	unsigned char speed;		 /* 赛车速度：当前最大速度 = 档位(gear) × 10 */
 	unsigned char laps;			 /* 赛车跑过的圈数 */
-	volatile unsigned char gear; /* 赛车档位: 共四个档 1、2、3、4 */
+	volatile unsigned char gear; /* 赛车档位: 共四个档 0、1、2、3 */
 } Vehicle;
 
 /* Private define ------------------------------------------------------------*/
 #define PI 3.14 /* 圆周率Π */
 
+#define COVER_BUF 0x32000000	  /* 背景图像地址 */
 #define BACKGROUND_BUF 0x31000000 /* 背景图像地址 */
 
 #define TRACK_RADIUS 100	   /* 赛道半径 */
@@ -65,7 +66,7 @@ void delay(int time);
 
 /* Exported functions --------------------------------------------------------*/
 extern void __irq INT0_Handler(void);
-extern void __irq INT1_Handler(void);
+extern void __irq INT2_Handler(void);
 
 #endif /* __VEHICLE_H */
 
