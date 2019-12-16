@@ -26,7 +26,6 @@ int main(void)
 	SystemInit();
 	PeripheralInit();
 	ExitInit();
-
 	VehicleInit();
 
 	while (1)

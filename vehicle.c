@@ -19,7 +19,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 Vehicle vehicle = {
-	90, 0, 0, 2}; /* 赛车结构体 */
+	90, 0, 1, 2}; /* 赛车结构体 */
+
+unsigned char display_flag = 0;
 
 /* Private functions ---------------------------------------------------------*/
 void VehicleInit(void)
@@ -57,17 +59,21 @@ void VehicleStatusUpdate(void)
 	{
 		vehicle.position -= 360;
 		vehicle.laps++;
+		if (((vehicle.laps) % 5) == 0)
+		{
+			display_flag = 1;
+		}
 	}
 
 	/* 转换灯状态 **************************************************************/
 	/* 30 为档位放大系数，闪烁频率与档位呈正相关 */
-	if (led_index < (4 - vehicle.gear) * 10)
+	if (led_index < (4 - vehicle.gear) * 3)
 	{
 		led_index++;
 		/* LED显示 */
 		LED_TOGGLE(led_switch);
 	}
-	else if (led_index == (4 - vehicle.gear) * 10)
+	else if (led_index == (4 - vehicle.gear) * 3)
 	{
 		led_index = 0;
 
@@ -79,34 +85,49 @@ void VehicleStatusUpdate(void)
 void VehicleDisplays(void)
 {
 	/* 绘制赛车 */
-	DrawVehicle(vehicle.position, VEHICLE_COLOR);
 
-	/* 显示圈数与速度 */
-	DisplayLED();
+	DrawVehicle(vehicle.position, VEHICLE_COLOR);
+	/* 显示圈数与速度*/
+	if (display_flag != 0)
+	{
+		DisplayLED();
+		display_flag = 0;
+	}
 }
 
 void DisplayLED(void)
 {
-	/***********************
-	 * 数码管前两位显示圈数 *
-	 * 第一位：vehicle.laps / 10
-	 * 第二位：vehicle.laps % 10
-	 **********************/
+	unsigned int i;
 
-	choose_position(0, vehicle.laps / 10, 0);
+	for (i = 0; i < 100; i++)
+	{
+		/***********************
+		 * 数码管前两位显示圈数 *
+		 * 第一位：vehicle.laps / 10
+		 * 第二位：vehicle.laps % 10
+		 **********************/
+
+		choose_position(0, vehicle.laps / 10, 0);
+		delay(5);
+		choose_position(1, vehicle.laps % 10, 0);
+		delay(5);
+	}
+	choose_position(0, 15, 0);
 	//delay(5);
-	choose_position(1, vehicle.laps % 10, 0);
-	//delay(5);
+	choose_position(1, 15, 0);
 
 	/***************************
 	 * 数码管后两位显示当前速度 * 
 	 * 第一位：vehicle.speed / 10
 	 * 第二位：vehicle.speed % 10
 	 **************************/
+	/*
 	choose_position(2, vehicle.speed / 10, 0);
 	//delay(5);
 	choose_position(3, vehicle.speed % 10, 0);
 	//delay(5);
+
+*/
 }
 
 void LED_TOGGLE(int flag)
@@ -178,6 +199,7 @@ void __irq INT1_Handler(void)
 	{
 		vehicle.gear++;
 	}
+
 	ClearInt();
 }
 
@@ -187,6 +209,7 @@ void __irq INT0_Handler(void)
 	{
 		vehicle.gear--;
 	}
+
 	ClearInt();
 }
 void choose_position(int p, int num, int dot)
@@ -213,6 +236,13 @@ void choose_position(int p, int num, int dot)
 
 	rGPEDAT = (rGPEDAT & ~(0x3C00)) | (num << 10); // 对应数字(6)
 	rGPHDAT = (rGPHDAT & ~(1 << 8)) | (dot << 8);
+}
+void delay(int time)
+{
+	int i, j;
+	for (i = 0; i < time; i++)
+		for (j = 0; j < 1000; j++)
+			;
 }
 
 /********************************** END OF FILE *******************************/

@@ -29,10 +29,10 @@
 /* Private typedef -----------------------------------------------------------*/
 typedef struct
 {
-    volatile float position;      /* 赛车位置：用角度表示，取值为0 ~ 360 */
-    volatile unsigned char speed; /* 赛车速度：当前最大速度 = 档位(gear) × 30 */
-    volatile unsigned char laps;  /* 赛车跑过的圈数 */
-    volatile unsigned char gear;  /* 赛车档位: 共四个档 1、2、3、4 */
+	float position;				 /* 赛车位置：用角度表示，取值为0 ~ 360 */
+	unsigned char speed;		 /* 赛车速度：当前最大速度 = 档位(gear) × 30 */
+	unsigned char laps;			 /* 赛车跑过的圈数 */
+	volatile unsigned char gear; /* 赛车档位: 共四个档 1、2、3、4 */
 } Vehicle;
 
 /* Private define ------------------------------------------------------------*/
@@ -40,7 +40,7 @@ typedef struct
 
 #define BACKGROUND_BUF 0x31000000 /* 背景图像地址 */
 
-#define TRACK_RADIUS 100       /* 赛道半径 */
+#define TRACK_RADIUS 100	   /* 赛道半径 */
 #define TRACK_CENTRE_X 200.0f  /* 赛道中心横坐标 */
 #define TRACK_CENTRE_Y 120.0f  /* 赛道中心纵坐标 */
 #define TRACK_WIDTH_HALF 17.0f /* 赛道宽度的一半，实际长度 34 （赛车方块的对角线长度） */
@@ -61,6 +61,7 @@ void VehicleStatusUpdate(void);
 void DrawTrack(void);
 void DrawVehicle(float p, COLOR c);
 void choose_position(int p, int num, int dot);
+void delay(int time);
 
 /* Exported functions --------------------------------------------------------*/
 extern void __irq INT0_Handler(void);
