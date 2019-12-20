@@ -1,0 +1,5 @@
+<map id="delay" name="delay">
+<area shape="rect" id="node2" href="$main_8h.html#a22ded4a110818b6fb8a72a001ff988ea" title="在LCD上显示成员信息，持续一段时间 " alt="" coords="111,5,197,32"/>
+<area shape="rect" id="node3" href="$vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="107,56,201,83"/>
+<area shape="rect" id="node4" href="$vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="249,56,364,83"/>
+</map>
