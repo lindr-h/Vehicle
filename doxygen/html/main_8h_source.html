@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Vehicle: E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/main.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Vehicle
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/main.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;def.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;consol.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;S3c2410x.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;INT.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;2410lib.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;lcdlib.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* Private function prototypes -----------------------------------------------*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a93f514700ccf00d08dbdcff7f1224eb2">SystemInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a8004f8f482dbef7f0522b48a579b8b47">PeripheralInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a85f4f7afb13dec1233f5cfd2473d5a12">ExitInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a22ded4a110818b6fb8a72a001ff988ea">ShowCover</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a168b12a66c15cec54bd528ee7ed16967">EINT0_Enable</a>(<span class="keywordtype">int</span> flag);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8h.html#a8133c22f4d74997b11c8afb973bc8c9f">EINT2_Enable</a>(<span class="keywordtype">int</span> flag);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/* Private functions ---------------------------------------------------------*/</span></div>
+<div class="ttc" id="main_8h_html_a22ded4a110818b6fb8a72a001ff988ea"><div class="ttname"><a href="main_8h.html#a22ded4a110818b6fb8a72a001ff988ea">ShowCover</a></div><div class="ttdeci">void ShowCover(void)</div><div class="ttdoc">在LCD上显示成员信息，持续一段时间 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00098">main.c:98</a></div></div>
+<div class="ttc" id="main_8h_html_a85f4f7afb13dec1233f5cfd2473d5a12"><div class="ttname"><a href="main_8h.html#a85f4f7afb13dec1233f5cfd2473d5a12">ExitInit</a></div><div class="ttdeci">void ExitInit(void)</div><div class="ttdoc">中断初始化 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00066">main.c:66</a></div></div>
+<div class="ttc" id="main_8h_html_a93f514700ccf00d08dbdcff7f1224eb2"><div class="ttname"><a href="main_8h.html#a93f514700ccf00d08dbdcff7f1224eb2">SystemInit</a></div><div class="ttdeci">void SystemInit(void)</div><div class="ttdoc">系统初始化 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00042">main.c:42</a></div></div>
+<div class="ttc" id="main_8h_html_a168b12a66c15cec54bd528ee7ed16967"><div class="ttname"><a href="main_8h.html#a168b12a66c15cec54bd528ee7ed16967">EINT0_Enable</a></div><div class="ttdeci">void EINT0_Enable(int flag)</div><div class="ttdoc">中断0使能函数 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00111">main.c:111</a></div></div>
+<div class="ttc" id="main_8h_html_a8004f8f482dbef7f0522b48a579b8b47"><div class="ttname"><a href="main_8h.html#a8004f8f482dbef7f0522b48a579b8b47">PeripheralInit</a></div><div class="ttdeci">void PeripheralInit(void)</div><div class="ttdoc">外设初始化 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00053">main.c:53</a></div></div>
+<div class="ttc" id="main_8h_html_a8133c22f4d74997b11c8afb973bc8c9f"><div class="ttname"><a href="main_8h.html#a8133c22f4d74997b11c8afb973bc8c9f">EINT2_Enable</a></div><div class="ttdeci">void EINT2_Enable(int flag)</div><div class="ttdoc">中断2使能函数 </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00133">main.c:133</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2019年 十二月 21日 星期六 01:47:45 , 为 Vehicle使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

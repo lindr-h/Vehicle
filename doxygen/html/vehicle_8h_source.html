@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Vehicle: E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Vehicle
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="vehicle_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef __VEHICLE_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __VEHICLE_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;def.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;consol.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;S3c2410x.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;INT.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;2410lib.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;lcdlib.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* Private typedef -----------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_vehicle.html">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">   29</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a>;              </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">   30</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a>;         </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">   31</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a>;          </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">   32</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">gear</a>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="struct_vehicle.html">Vehicle</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Private define ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a598a3330b3c21701223ee0ca14316eca">   36</a></span>&#160;<span class="preprocessor">#define PI 3.14 </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a1ebff6b11a4c5a7bd176ca9cc2cb57c7">   38</a></span>&#160;<span class="preprocessor">#define COVER_BUF 0x32000000      </span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="vehicle_8h.html#af3e41de76d0bbbc15c2d217dee630e2c">   39</a></span>&#160;<span class="preprocessor">#define BACKGROUND_BUF 0x31000000 </span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="vehicle_8h.html#af1062de956277a36ed7f39bb42e60f4b">   41</a></span>&#160;<span class="preprocessor">#define SPEED_X 10  </span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a6878cf48d46febe3904a323be1dc944c">   42</a></span>&#160;<span class="preprocessor">#define SPEED_Y 200 </span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="vehicle_8h.html#aa47729bda8134b8e4d57efdc2059dc57">   43</a></span>&#160;<span class="preprocessor">#define SPEED_W 90  </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a5e9068043931c7cb96c6045e9be3e34d">   44</a></span>&#160;<span class="preprocessor">#define SPEED_H 21  </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a64f019298900dd5c1e36926e7c005f7c">   46</a></span>&#160;<span class="preprocessor">#define TRACK_RADIUS 100       </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a15d49b03259d0d164c152c151b24ce2a">   47</a></span>&#160;<span class="preprocessor">#define TRACK_CENTRE_X 200.0f  </span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="vehicle_8h.html#aab40bca60845489b3efae50a8425634a">   48</a></span>&#160;<span class="preprocessor">#define TRACK_CENTRE_Y 120.0f  </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="vehicle_8h.html#af7ca67b66395e29d99ecbac716582787">   49</a></span>&#160;<span class="preprocessor">#define TRACK_WIDTH_HALF 17.0f </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a841a9bc465f236a3520d3cdffc1a9100">   50</a></span>&#160;<span class="preprocessor">#define TRACK_COLOR 0x000000   </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">   52</a></span>&#160;<span class="preprocessor">#define VEHICLE_WIDTH_HALF 11  </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="vehicle_8h.html#a687a7041f1313e7c7836ff0c79e6c083">   53</a></span>&#160;<span class="preprocessor">#define VEHICLE_COLOR 0xffff00 </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span><span class="comment">/* Private function prototypes -----------------------------------------------*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">VehicleInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">VehicleStatusUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">VehicleDisplays</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8">DisplaySMG</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a389b4b4f6b01f7d8b5867afaa79be8f0">DisplayLED</a>(<span class="keywordtype">int</span> flag);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#aaefbc0e26f31cb3185e4126702d08566">DisplayOneSMG</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> num, <span class="keywordtype">int</span> dot);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a>(<span class="keywordtype">float</span> p, COLOR c);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">DrawTrack</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">DrawRect</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="vehicle_8h.html#ad56cd570f598052235ff7111f99c6504">delay</a>(<span class="keywordtype">int</span> time);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">/* Exported functions --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> __irq <a class="code" href="vehicle_8h.html#a7897534f6b2cf9ec2d72af613e6c100d">INT0_Handler</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> __irq <a class="code" href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">INT2_Handler</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __VEHICLE_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/********************************** END OF FILE *******************************/</span></div>
+<div class="ttc" id="vehicle_8h_html_a36a5da33bcf4051796cd7c997bc5c896"><div class="ttname"><a href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">VehicleDisplays</a></div><div class="ttdeci">void VehicleDisplays(void)</div><div class="ttdoc">显示赛车状态 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00105">vehicle.c:105</a></div></div>
+<div class="ttc" id="struct_vehicle_html"><div class="ttname"><a href="struct_vehicle.html">Vehicle</a></div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00027">vehicle.h:27</a></div></div>
+<div class="ttc" id="vehicle_8h_html_ad56cd570f598052235ff7111f99c6504"><div class="ttname"><a href="vehicle_8h.html#ad56cd570f598052235ff7111f99c6504">delay</a></div><div class="ttdeci">void delay(int time)</div><div class="ttdoc">简单的延时函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00302">vehicle.c:302</a></div></div>
+<div class="ttc" id="struct_vehicle_html_aa8a30effced78923011101bf241c4207"><div class="ttname"><a href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">Vehicle::laps</a></div><div class="ttdeci">unsigned char laps</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00031">vehicle.h:31</a></div></div>
+<div class="ttc" id="vehicle_8h_html_aaefbc0e26f31cb3185e4126702d08566"><div class="ttname"><a href="vehicle_8h.html#aaefbc0e26f31cb3185e4126702d08566">DisplayOneSMG</a></div><div class="ttdeci">void DisplayOneSMG(int p, int num, int dot)</div><div class="ttdoc">数码管显示函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00153">vehicle.c:153</a></div></div>
+<div class="ttc" id="struct_vehicle_html_ab556fea5be6ac67786f2833f89c3b684"><div class="ttname"><a href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">Vehicle::gear</a></div><div class="ttdeci">volatile unsigned char gear</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00032">vehicle.h:32</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a37b4defbf720b1dc56d488cebe140ba2"><div class="ttname"><a href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">VehicleInit</a></div><div class="ttdeci">void VehicleInit(void)</div><div class="ttdoc">赛车程序初始化函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00028">vehicle.c:28</a></div></div>
+<div class="ttc" id="vehicle_8h_html_ae06b8941e180800660bab73ca89bb29c"><div class="ttname"><a href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">VehicleStatusUpdate</a></div><div class="ttdeci">void VehicleStatusUpdate(void)</div><div class="ttdoc">更新赛车数据 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00046">vehicle.c:46</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a01f7b1de24a0bfcba4d3fef6345fef99"><div class="ttname"><a href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">DrawRect</a></div><div class="ttdeci">void DrawRect(void)</div><div class="ttdoc">绘制蓝色矩形方块 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00253">vehicle.c:253</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a573e3a73f898d8e69dda05e56716723d"><div class="ttname"><a href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">DrawTrack</a></div><div class="ttdeci">void DrawTrack(void)</div><div class="ttdoc">绘制圆形赛道 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00203">vehicle.c:203</a></div></div>
+<div class="ttc" id="struct_vehicle_html_aa4eab0a1ec935e4bbdf16be9c7963f3c"><div class="ttname"><a href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">Vehicle::speed</a></div><div class="ttdeci">unsigned char speed</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00030">vehicle.h:30</a></div></div>
+<div class="ttc" id="vehicle_8h_html_aea5c29b708bb0d72e962b61515fc44b8"><div class="ttname"><a href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8">DisplaySMG</a></div><div class="ttdeci">void DisplaySMG(void)</div><div class="ttdoc">数码管显示函数 在左边两位显示当前已走圈数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00125">vehicle.c:125</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a4fd900a3a7110287db68e11d1fa6d0e3"><div class="ttname"><a href="vehicle_8h.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a></div><div class="ttdeci">void DrawVehicle(float p, COLOR c)</div><div class="ttdoc">绘制赛车，即一个小矩形 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00233">vehicle.c:233</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a7897534f6b2cf9ec2d72af613e6c100d"><div class="ttname"><a href="vehicle_8h.html#a7897534f6b2cf9ec2d72af613e6c100d">INT0_Handler</a></div><div class="ttdeci">void __irq INT0_Handler(void)</div><div class="ttdoc">按键1中断处理函数 每按一次“档位”成员变量自减一 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00287">vehicle.c:287</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a5d7d4bd8a4ae8dfde93d64d27a492463"><div class="ttname"><a href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">INT2_Handler</a></div><div class="ttdeci">void __irq INT2_Handler(void)</div><div class="ttdoc">按键2中断处理函数 每按一次“档位”成员变量自增一 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00273">vehicle.c:273</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a389b4b4f6b01f7d8b5867afaa79be8f0"><div class="ttname"><a href="vehicle_8h.html#a389b4b4f6b01f7d8b5867afaa79be8f0">DisplayLED</a></div><div class="ttdeci">void DisplayLED(int flag)</div><div class="ttdoc">LED 显示函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00184">vehicle.c:184</a></div></div>
+<div class="ttc" id="struct_vehicle_html_a76777b356ab2a080225682528119c4fe"><div class="ttname"><a href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">Vehicle::position</a></div><div class="ttdeci">float position</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00029">vehicle.h:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2019年 十二月 21日 星期六 01:47:45 , 为 Vehicle使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

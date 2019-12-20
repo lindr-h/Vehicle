@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Vehicle: E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Vehicle
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>赛车模拟控制程序头文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;def.h&quot;</code><br/>
+<code>#include &quot;consol.h&quot;</code><br/>
+<code>#include &quot;S3c2410x.h&quot;</code><br/>
+<code>#include &quot;INT.h&quot;</code><br/>
+<code>#include &quot;2410lib.h&quot;</code><br/>
+<code>#include &quot;lcdlib.h&quot;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;math.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+vehicle.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h__incl.png" border="0" usemap="#_e_1_2_xE6_xB5_x9A_xE5_xB0_x8F_xE6_xA3_xAE_xE4_xB8_x93_xE7_x94_xA8_2_xE8_xB5_x84_xE6_x96_x99_22-_xE5_xA4_xA7_xE4_xB8_x89_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_xE6_xB1_xBD_xE8_xBD_xA6_xE6_xA8_xA1_xE6_x8B_x9F_xE6_x8E_xA7_xE5_x88_xB6_xE7_xA8_x8B_xE5_xBA_x8F_2vehicle_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h__dep__incl.png" border="0" usemap="#_e_1_2_xE6_xB5_x9A_xE5_xB0_x8F_xE6_xA3_xAE_xE4_xB8_x93_xE7_x94_xA8_2_xE8_xB5_x84_xE6_x96_x99_22-_xE5_xA4_xA7_xE4_xB8_x89_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_xE6_xB1_xBD_xE8_xBD_xA6_xE6_xA8_xA1_xE6_x8B_x9F_xE6_x8E_xA7_xE5_x88_xB6_xE7_xA8_x8B_xE5_xBA_x8F_2vehicle_8hdep" alt=""/></div>
+<map name="_e_1_2_xE6_xB5_x9A_xE5_xB0_x8F_xE6_xA3_xAE_xE4_xB8_x93_xE7_x94_xA8_2_xE8_xB5_x84_xE6_x96_x99_22-_xE5_xA4_xA7_xE4_xB8_x89_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_xE6_xB1_xBD_xE8_xBD_xA6_xE6_xA8_xA1_xE6_x8B_x9F_xE6_x8E_xA7_xE5_x88_xB6_xE7_xA8_x8B_xE5_xBA_x8F_2vehicle_8hdep" id="_e_1_2_xE6_xB5_x9A_xE5_xB0_x8F_xE6_xA3_xAE_xE4_xB8_x93_xE7_x94_xA8_2_xE8_xB5_x84_xE6_x96_x99_22-_xE5_xA4_xA7_xE4_xB8_x89_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_2_xE5_xB5_x8C_xE5_x85_xA5_xE5_xBC_x8F_xE6_xB1_xBD_xE8_xBD_xA6_xE6_xA8_xA1_xE6_x8B_x9F_xE6_x8E_xA7_xE5_x88_xB6_xE7_xA8_x8B_xE5_xBA_x8F_2vehicle_8hdep">
+<area shape="rect" id="node2" href="main_8c.html" title="赛车模拟控制程序主函数源文件 " alt="" coords="5,131,240,187"/><area shape="rect" id="node3" href="vehicle_8c.html" title="赛车模拟控制程序源文件 " alt="" coords="265,124,455,195"/></map>
+</div>
+</div>
+<p><a href="vehicle_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vehicle.html">Vehicle</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a598a3330b3c21701223ee0ca14316eca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>&#160;&#160;&#160;3.14</td></tr>
+<tr class="separator:a598a3330b3c21701223ee0ca14316eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebff6b11a4c5a7bd176ca9cc2cb57c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a1ebff6b11a4c5a7bd176ca9cc2cb57c7">COVER_BUF</a>&#160;&#160;&#160;0x32000000</td></tr>
+<tr class="separator:a1ebff6b11a4c5a7bd176ca9cc2cb57c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e41de76d0bbbc15c2d217dee630e2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#af3e41de76d0bbbc15c2d217dee630e2c">BACKGROUND_BUF</a>&#160;&#160;&#160;0x31000000</td></tr>
+<tr class="separator:af3e41de76d0bbbc15c2d217dee630e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1062de956277a36ed7f39bb42e60f4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#af1062de956277a36ed7f39bb42e60f4b">SPEED_X</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:af1062de956277a36ed7f39bb42e60f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6878cf48d46febe3904a323be1dc944c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a6878cf48d46febe3904a323be1dc944c">SPEED_Y</a>&#160;&#160;&#160;200</td></tr>
+<tr class="separator:a6878cf48d46febe3904a323be1dc944c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47729bda8134b8e4d57efdc2059dc57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#aa47729bda8134b8e4d57efdc2059dc57">SPEED_W</a>&#160;&#160;&#160;90</td></tr>
+<tr class="separator:aa47729bda8134b8e4d57efdc2059dc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9068043931c7cb96c6045e9be3e34d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a5e9068043931c7cb96c6045e9be3e34d">SPEED_H</a>&#160;&#160;&#160;21</td></tr>
+<tr class="separator:a5e9068043931c7cb96c6045e9be3e34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f019298900dd5c1e36926e7c005f7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a64f019298900dd5c1e36926e7c005f7c">TRACK_RADIUS</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a64f019298900dd5c1e36926e7c005f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d49b03259d0d164c152c151b24ce2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a15d49b03259d0d164c152c151b24ce2a">TRACK_CENTRE_X</a>&#160;&#160;&#160;200.0f</td></tr>
+<tr class="separator:a15d49b03259d0d164c152c151b24ce2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab40bca60845489b3efae50a8425634a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#aab40bca60845489b3efae50a8425634a">TRACK_CENTRE_Y</a>&#160;&#160;&#160;120.0f</td></tr>
+<tr class="separator:aab40bca60845489b3efae50a8425634a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ca67b66395e29d99ecbac716582787"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#af7ca67b66395e29d99ecbac716582787">TRACK_WIDTH_HALF</a>&#160;&#160;&#160;17.0f</td></tr>
+<tr class="separator:af7ca67b66395e29d99ecbac716582787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841a9bc465f236a3520d3cdffc1a9100"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a841a9bc465f236a3520d3cdffc1a9100">TRACK_COLOR</a>&#160;&#160;&#160;0x000000</td></tr>
+<tr class="separator:a841a9bc465f236a3520d3cdffc1a9100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433dd285829a178cd787b3b113158125"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">VEHICLE_WIDTH_HALF</a>&#160;&#160;&#160;11</td></tr>
+<tr class="separator:a433dd285829a178cd787b3b113158125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687a7041f1313e7c7836ff0c79e6c083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a687a7041f1313e7c7836ff0c79e6c083">VEHICLE_COLOR</a>&#160;&#160;&#160;0xffff00</td></tr>
+<tr class="separator:a687a7041f1313e7c7836ff0c79e6c083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a37b4defbf720b1dc56d488cebe140ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37b4defbf720b1dc56d488cebe140ba2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">VehicleInit</a> (void)</td></tr>
+<tr class="memdesc:a37b4defbf720b1dc56d488cebe140ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">赛车程序初始化函数 <br/></td></tr>
+<tr class="separator:a37b4defbf720b1dc56d488cebe140ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06b8941e180800660bab73ca89bb29c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">VehicleStatusUpdate</a> (void)</td></tr>
+<tr class="memdesc:ae06b8941e180800660bab73ca89bb29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新赛车数据  <a href="#ae06b8941e180800660bab73ca89bb29c">更多...</a><br/></td></tr>
+<tr class="separator:ae06b8941e180800660bab73ca89bb29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a5da33bcf4051796cd7c997bc5c896"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36a5da33bcf4051796cd7c997bc5c896"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">VehicleDisplays</a> (void)</td></tr>
+<tr class="memdesc:a36a5da33bcf4051796cd7c997bc5c896"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示赛车状态 <br/></td></tr>
+<tr class="separator:a36a5da33bcf4051796cd7c997bc5c896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5c29b708bb0d72e962b61515fc44b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea5c29b708bb0d72e962b61515fc44b8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8">DisplaySMG</a> (void)</td></tr>
+<tr class="memdesc:aea5c29b708bb0d72e962b61515fc44b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">数码管显示函数 在左边两位显示当前已走圈数 <br/></td></tr>
+<tr class="separator:aea5c29b708bb0d72e962b61515fc44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389b4b4f6b01f7d8b5867afaa79be8f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a389b4b4f6b01f7d8b5867afaa79be8f0">DisplayLED</a> (int flag)</td></tr>
+<tr class="memdesc:a389b4b4f6b01f7d8b5867afaa79be8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED 显示函数  <a href="#a389b4b4f6b01f7d8b5867afaa79be8f0">更多...</a><br/></td></tr>
+<tr class="separator:a389b4b4f6b01f7d8b5867afaa79be8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefbc0e26f31cb3185e4126702d08566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#aaefbc0e26f31cb3185e4126702d08566">DisplayOneSMG</a> (int p, int num, int dot)</td></tr>
+<tr class="memdesc:aaefbc0e26f31cb3185e4126702d08566"><td class="mdescLeft">&#160;</td><td class="mdescRight">数码管显示函数  <a href="#aaefbc0e26f31cb3185e4126702d08566">更多...</a><br/></td></tr>
+<tr class="separator:aaefbc0e26f31cb3185e4126702d08566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd900a3a7110287db68e11d1fa6d0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a> (float p, COLOR c)</td></tr>
+<tr class="memdesc:a4fd900a3a7110287db68e11d1fa6d0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制赛车，即一个小矩形  <a href="#a4fd900a3a7110287db68e11d1fa6d0e3">更多...</a><br/></td></tr>
+<tr class="separator:a4fd900a3a7110287db68e11d1fa6d0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573e3a73f898d8e69dda05e56716723d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a573e3a73f898d8e69dda05e56716723d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">DrawTrack</a> (void)</td></tr>
+<tr class="memdesc:a573e3a73f898d8e69dda05e56716723d"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制圆形赛道 <br/></td></tr>
+<tr class="separator:a573e3a73f898d8e69dda05e56716723d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f7b1de24a0bfcba4d3fef6345fef99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01f7b1de24a0bfcba4d3fef6345fef99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">DrawRect</a> (void)</td></tr>
+<tr class="memdesc:a01f7b1de24a0bfcba4d3fef6345fef99"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制蓝色矩形方块 <br/></td></tr>
+<tr class="separator:a01f7b1de24a0bfcba4d3fef6345fef99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56cd570f598052235ff7111f99c6504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#ad56cd570f598052235ff7111f99c6504">delay</a> (int time)</td></tr>
+<tr class="memdesc:ad56cd570f598052235ff7111f99c6504"><td class="mdescLeft">&#160;</td><td class="mdescRight">简单的延时函数  <a href="#ad56cd570f598052235ff7111f99c6504">更多...</a><br/></td></tr>
+<tr class="separator:ad56cd570f598052235ff7111f99c6504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7897534f6b2cf9ec2d72af613e6c100d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7897534f6b2cf9ec2d72af613e6c100d"></a>
+void __irq&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a7897534f6b2cf9ec2d72af613e6c100d">INT0_Handler</a> (void)</td></tr>
+<tr class="memdesc:a7897534f6b2cf9ec2d72af613e6c100d"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键1中断处理函数 每按一次“档位”成员变量自减一 <br/></td></tr>
+<tr class="separator:a7897534f6b2cf9ec2d72af613e6c100d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7d4bd8a4ae8dfde93d64d27a492463"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d7d4bd8a4ae8dfde93d64d27a492463"></a>
+void __irq&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">INT2_Handler</a> (void)</td></tr>
+<tr class="memdesc:a5d7d4bd8a4ae8dfde93d64d27a492463"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键2中断处理函数 每按一次“档位”成员变量自增一 <br/></td></tr>
+<tr class="separator:a5d7d4bd8a4ae8dfde93d64d27a492463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>赛车模拟控制程序头文件 </p>
+<hr/>
+<dl class="section author"><dt>作者</dt><dd>Gump, LDR </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-12-08 <hr/>
+</dd></dl>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 中定义.</p>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="af3e41de76d0bbbc15c2d217dee630e2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BACKGROUND_BUF&#160;&#160;&#160;0x31000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>背景图像地址 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ebff6b11a4c5a7bd176ca9cc2cb57c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COVER_BUF&#160;&#160;&#160;0x32000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>背景图像地址 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a598a3330b3c21701223ee0ca14316eca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PI&#160;&#160;&#160;3.14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>圆周率Π </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e9068043931c7cb96c6045e9be3e34d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPEED_H&#160;&#160;&#160;21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>速度显示框高度 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa47729bda8134b8e4d57efdc2059dc57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPEED_W&#160;&#160;&#160;90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>速度显示框宽度 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1062de956277a36ed7f39bb42e60f4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPEED_X&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>速度显示框横坐标 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6878cf48d46febe3904a323be1dc944c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPEED_Y&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>速度显示框纵坐标 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15d49b03259d0d164c152c151b24ce2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACK_CENTRE_X&#160;&#160;&#160;200.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛道中心横坐标 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab40bca60845489b3efae50a8425634a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACK_CENTRE_Y&#160;&#160;&#160;120.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛道中心纵坐标 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a841a9bc465f236a3520d3cdffc1a9100"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACK_COLOR&#160;&#160;&#160;0x000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛道颜色 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64f019298900dd5c1e36926e7c005f7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACK_RADIUS&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛道半径 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7ca67b66395e29d99ecbac716582787"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRACK_WIDTH_HALF&#160;&#160;&#160;17.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛道宽度的一半，实际长度 34 （赛车方块的对角线长度） </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a687a7041f1313e7c7836ff0c79e6c083"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEHICLE_COLOR&#160;&#160;&#160;0xffff00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛车颜色 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a class="anchor" id="a433dd285829a178cd787b3b113158125"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VEHICLE_WIDTH_HALF&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>赛车宽度的一半，实际长度 23 </p>
+
+<p>在文件 <a class="el" href="vehicle_8h_source.html">vehicle.h</a> 第 <a class="el" href="vehicle_8h_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ad56cd570f598052235ff7111f99c6504"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>简单的延时函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>延时次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="vehicle_8c_source.html">vehicle.c</a> 第 <a class="el" href="vehicle_8c_source.html#l00302">302</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; time; i++)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; 1000; j++)</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            ;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h_ad56cd570f598052235ff7111f99c6504_icgraph.png" border="0" usemap="#vehicle_8h_ad56cd570f598052235ff7111f99c6504_icgraph" alt=""/></div>
+<map name="vehicle_8h_ad56cd570f598052235ff7111f99c6504_icgraph" id="vehicle_8h_ad56cd570f598052235ff7111f99c6504_icgraph">
+<area shape="rect" id="node2" href="main_8h.html#a22ded4a110818b6fb8a72a001ff988ea" title="在LCD上显示成员信息，持续一段时间 " alt="" coords="111,5,197,32"/><area shape="rect" id="node3" href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="107,56,201,83"/><area shape="rect" id="node4" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="249,56,364,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a389b4b4f6b01f7d8b5867afaa79be8f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayLED </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LED 显示函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>控制标志 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="vehicle_8c_source.html">vehicle.c</a> 第 <a class="el" href="vehicle_8c_source.html#l00184">184</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (flag == 1) <span class="comment">/* led on */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        rGPFDAT &amp;= ~(1 &lt;&lt; 7);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        rGPFDAT &amp;= ~(1 &lt;&lt; 4);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">else</span> <span class="comment">/* led off */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        rGPFDAT |= 1 &lt;&lt; 7;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        rGPFDAT |= 1 &lt;&lt; 4;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aaefbc0e26f31cb3185e4126702d08566"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayOneSMG </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数码管显示函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>数字在数码管中的位置 <ul>
+<li>0..3 从右到左依次为 0 ~ 3 位 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">num</td><td>要显示的数字 </td></tr>
+    <tr><td class="paramname">dot</td><td>是否显示小数点 <ul>
+<li>0 不显示小数点 </li>
+<li>1 显示小数点 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="vehicle_8c_source.html">vehicle.c</a> 第 <a class="el" href="vehicle_8c_source.html#l00153">153</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    status(p)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        rGPGDAT &amp;= ~(1 &lt;&lt; 2); <span class="comment">/* 设置数码管的位选 GPG2 = 0 (COM1) */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        rGPEDAT &amp;= ~(1 &lt;&lt; 9); <span class="comment">/* 设置数码管的位选 GPE9 = 0 (COM2) */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        rGPGDAT |= (1 &lt;&lt; 2);  <span class="comment">/* 设置数码管的位选 GPG2 = 1 (COM1) */</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        rGPEDAT &amp;= ~(1 &lt;&lt; 9); <span class="comment">/* 设置数码管的位选 GPE9 = 0 (COM2) */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        rGPGDAT &amp;= ~(1 &lt;&lt; 2); <span class="comment">/* 设置数码管的位选 GPG2 = 0 (COM1) */</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        rGPEDAT |= (1 &lt;&lt; 9);  <span class="comment">/* 设置数码管的位选 GPE9 = 1 (COM2) */</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        rGPGDAT |= (1 &lt;&lt; 2); <span class="comment">/* 设置数码管的位选 GPG2 = 1 (COM1) */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        rGPEDAT |= (1 &lt;&lt; 9); <span class="comment">/* 设置数码管的位选 GPE9 = 1 (COM2) */</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    rGPEDAT = (rGPEDAT &amp; ~(0x3C00)) | (num &lt;&lt; 10); <span class="comment">/* 对应数字 6 */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    rGPHDAT = (rGPHDAT &amp; ~(1 &lt;&lt; 8)) | (dot &lt;&lt; 8);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h_aaefbc0e26f31cb3185e4126702d08566_icgraph.png" border="0" usemap="#vehicle_8h_aaefbc0e26f31cb3185e4126702d08566_icgraph" alt=""/></div>
+<map name="vehicle_8h_aaefbc0e26f31cb3185e4126702d08566_icgraph" id="vehicle_8h_aaefbc0e26f31cb3185e4126702d08566_icgraph">
+<area shape="rect" id="node2" href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="172,5,267,32"/><area shape="rect" id="node3" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="315,5,429,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fd900a3a7110287db68e11d1fa6d0e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawVehicle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLOR&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绘制赛车，即一个小矩形 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>赛车当前所处在赛道的位置 </td></tr>
+    <tr><td class="paramname">c</td><td>赛车颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在文件 <a class="el" href="vehicle_8c_source.html">vehicle.c</a> 第 <a class="el" href="vehicle_8c_source.html#l00233">233</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">/* 以矩形的几何中心为定位点，从左上角到右下角绘制矩形 */</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">for</span> (i = -<a class="code" href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">VEHICLE_WIDTH_HALF</a>; i &lt; <a class="code" href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">VEHICLE_WIDTH_HALF</a>; i++)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">for</span> (j = -VEHICLE_WIDTH_HALF; j &lt; <a class="code" href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">VEHICLE_WIDTH_HALF</a>; j++)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            setpixel(<a class="code" href="vehicle_8h.html#a15d49b03259d0d164c152c151b24ce2a">TRACK_CENTRE_X</a> + <a class="code" href="vehicle_8h.html#a64f019298900dd5c1e36926e7c005f7c">TRACK_RADIUS</a> * cos(p * <a class="code" href="vehicle_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a> / 180.0f) + i,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                     <a class="code" href="vehicle_8h.html#aab40bca60845489b3efae50a8425634a">TRACK_CENTRE_Y</a> + <a class="code" href="vehicle_8h.html#a64f019298900dd5c1e36926e7c005f7c">TRACK_RADIUS</a> * sin(p * <a class="code" href="vehicle_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a> / 180.0f) + j,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                     c);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="ttc" id="vehicle_8h_html_a15d49b03259d0d164c152c151b24ce2a"><div class="ttname"><a href="vehicle_8h.html#a15d49b03259d0d164c152c151b24ce2a">TRACK_CENTRE_X</a></div><div class="ttdeci">#define TRACK_CENTRE_X</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00047">vehicle.h:47</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a598a3330b3c21701223ee0ca14316eca"><div class="ttname"><a href="vehicle_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a></div><div class="ttdeci">#define PI</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00036">vehicle.h:36</a></div></div>
+<div class="ttc" id="vehicle_8h_html_aab40bca60845489b3efae50a8425634a"><div class="ttname"><a href="vehicle_8h.html#aab40bca60845489b3efae50a8425634a">TRACK_CENTRE_Y</a></div><div class="ttdeci">#define TRACK_CENTRE_Y</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00048">vehicle.h:48</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a433dd285829a178cd787b3b113158125"><div class="ttname"><a href="vehicle_8h.html#a433dd285829a178cd787b3b113158125">VEHICLE_WIDTH_HALF</a></div><div class="ttdeci">#define VEHICLE_WIDTH_HALF</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00052">vehicle.h:52</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a64f019298900dd5c1e36926e7c005f7c"><div class="ttname"><a href="vehicle_8h.html#a64f019298900dd5c1e36926e7c005f7c">TRACK_RADIUS</a></div><div class="ttdeci">#define TRACK_RADIUS</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00046">vehicle.h:46</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h_a4fd900a3a7110287db68e11d1fa6d0e3_icgraph.png" border="0" usemap="#vehicle_8h_a4fd900a3a7110287db68e11d1fa6d0e3_icgraph" alt=""/></div>
+<map name="vehicle_8h_a4fd900a3a7110287db68e11d1fa6d0e3_icgraph" id="vehicle_8h_a4fd900a3a7110287db68e11d1fa6d0e3_icgraph">
+<area shape="rect" id="node2" href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2" title="赛车程序初始化函数 " alt="" coords="179,5,261,32"/><area shape="rect" id="node3" href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c" title="更新赛车数据 " alt="" coords="148,56,292,83"/><area shape="rect" id="node4" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="163,107,277,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae06b8941e180800660bab73ca89bb29c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VehicleStatusUpdate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新赛车数据 </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd>根据为赛车增加加速度属性值，使得赛车速度切换更加真实 </dd></dl>
+<p>&lt; LED 闪烁计数器</p>
+<p>&lt; LED 当前状态 </p>
+
+<p>在文件 <a class="el" href="vehicle_8c_source.html">vehicle.c</a> 第 <a class="el" href="vehicle_8c_source.html#l00046">46</a> 行定义.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> led_counter;              </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> led_status = 0; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/* 赛车前进 ****************************************************************/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/* 清除赛车当前位置 */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a>(<a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a>, 0xffffff);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// if (vehicle.speed &lt; vehicle.gear * 10) /* 后续改为根据加速度递增 */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">/* “档位”映射为“速度” */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a> = <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">gear</a> * 10;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/* “速度”成员变量格式化为字符串字面量 */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    sprintf(<a class="code" href="vehicle_8c.html#a3e1821db0005527ac107eae37171c9d9">speed</a>, <span class="stringliteral">&quot;Speed: %2d&quot;</span>, <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">/* 赛车位置前进 */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a> += <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">/* 圈数增加 ****************************************************************/</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a> &gt; 360)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a> -= 360;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a>++;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">/* 每五圈就在数码管上显示当前圈数 */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (((<a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a>) % 5) == 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="vehicle_8c.html#a804a164dbad16439f9b3259617407187">display_flag</a> = 1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">/* 只显示两位圈数 */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a> &gt;= 100)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a> -= 100;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">/* 转换灯状态 **************************************************************/</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">/* 计数器循环计数 */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/* 数字 3 为档位放大系数，闪烁频率与档位呈正相关 */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (led_counter &lt; (4 - <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">gear</a>) * 3)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        led_counter++;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">/* LED显示 */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        LED_Display(led_status);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    } <span class="comment">/* 计数完成时 */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (led_counter &gt;= (4 - <a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">gear</a>) * 3)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">/* 计数器清零 */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        led_counter = 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">/* 反转LED状态 */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        led_status = (led_status == 1) ? 0 : 1;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="ttc" id="vehicle_8c_html_a804a164dbad16439f9b3259617407187"><div class="ttname"><a href="vehicle_8c.html#a804a164dbad16439f9b3259617407187">display_flag</a></div><div class="ttdeci">unsigned char display_flag</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00020">vehicle.c:20</a></div></div>
+<div class="ttc" id="vehicle_8c_html_a7e67faac7eb0a26632340a79a8f0bf5f"><div class="ttname"><a href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a></div><div class="ttdeci">Vehicle vehicle</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00016">vehicle.c:16</a></div></div>
+<div class="ttc" id="struct_vehicle_html_aa8a30effced78923011101bf241c4207"><div class="ttname"><a href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">Vehicle::laps</a></div><div class="ttdeci">unsigned char laps</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00031">vehicle.h:31</a></div></div>
+<div class="ttc" id="vehicle_8c_html_a4fd900a3a7110287db68e11d1fa6d0e3"><div class="ttname"><a href="vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a></div><div class="ttdeci">void DrawVehicle(float p, COLOR c)</div><div class="ttdoc">绘制赛车，即一个小矩形 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00233">vehicle.c:233</a></div></div>
+<div class="ttc" id="struct_vehicle_html_ab556fea5be6ac67786f2833f89c3b684"><div class="ttname"><a href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">Vehicle::gear</a></div><div class="ttdeci">volatile unsigned char gear</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00032">vehicle.h:32</a></div></div>
+<div class="ttc" id="struct_vehicle_html_aa4eab0a1ec935e4bbdf16be9c7963f3c"><div class="ttname"><a href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">Vehicle::speed</a></div><div class="ttdeci">unsigned char speed</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00030">vehicle.h:30</a></div></div>
+<div class="ttc" id="vehicle_8c_html_a3e1821db0005527ac107eae37171c9d9"><div class="ttname"><a href="vehicle_8c.html#a3e1821db0005527ac107eae37171c9d9">speed</a></div><div class="ttdeci">char speed[10]</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00019">vehicle.c:19</a></div></div>
+<div class="ttc" id="struct_vehicle_html_a76777b356ab2a080225682528119c4fe"><div class="ttname"><a href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">Vehicle::position</a></div><div class="ttdeci">float position</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00029">vehicle.h:29</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vehicle_8h_ae06b8941e180800660bab73ca89bb29c_cgraph.png" border="0" usemap="#vehicle_8h_ae06b8941e180800660bab73ca89bb29c_cgraph" alt=""/></div>
+<map name="vehicle_8h_ae06b8941e180800660bab73ca89bb29c_cgraph" id="vehicle_8h_ae06b8941e180800660bab73ca89bb29c_cgraph">
+<area shape="rect" id="node2" href="vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3" title="绘制赛车，即一个小矩形 " alt="" coords="197,5,292,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2019年 十二月 21日 星期六 01:47:45 , 为 Vehicle使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
