@@ -51,6 +51,7 @@ void VehicleStatusUpdate(void)
 {
 	static int led_index;
 	static unsigned char led_switch = 0;
+	static int led_counter;				 /*!< LED 闪烁计数器 */
 
 	/* 赛车前进 ****************************************************************/
 	/* 清除赛车当前位置 */
@@ -85,15 +86,17 @@ void VehicleStatusUpdate(void)
 
 	/* 转换灯状态 **************************************************************/
 	/* 3 为档位放大系数，闪烁频率与档位呈正相关 */
-	if (led_index < (4 - vehicle.gear) * 3)
+	/* 计数器循环计数 */
+	if (led_counter < (4 - vehicle.gear) * 3)
 	{
-		led_index++;
+		led_counter++;
 		/* LED显示 */
-		LED_TOGGLE(led_switch);
-	}
-	else if (led_index == (4 - vehicle.gear) * 3)
+		LED_Display(led_switch);
+	} /* 计数完成时 */
+	else if (led_counter >= (4 - vehicle.gear) * 3)
 	{
-		led_index = 0;
+		/* 计数器清零 */
+		led_counter = 0;
 
 		/* 反转LED状态 */
 		led_switch = (led_switch == 1) ? 0 : 1;
