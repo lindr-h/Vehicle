@@ -21,6 +21,7 @@
 Vehicle vehicle = {
 	90, 0, 1, 2}; /* 赛车结构体 */
 
+char speed[10]; /* LCD 左上角显示的当前速度 */
 unsigned char display_flag = 0;
 
 /* Private functions ---------------------------------------------------------*/
@@ -61,6 +62,8 @@ void VehicleStatusUpdate(void)
 	vehicle.speed = vehicle.gear * 10;
 	/* 后续改为根据加速度递增 */
 	//}
+	sprintf(speed, "Speed: %2d", vehicle.speed);
+
 	vehicle.position += vehicle.speed;
 
 	/* 圈数增加 ****************************************************************/
@@ -74,9 +77,9 @@ void VehicleStatusUpdate(void)
 			display_flag = 1;
 		}
 		/* 只显示两位圈数 */
-		if (vehicle.lap >= 100)
+		if (vehicle.laps >= 100)
 		{
-			vehicle.lap -= 100;
+			vehicle.laps -= 100;
 		}
 	}
 
@@ -105,6 +108,9 @@ void VehicleDisplays(void)
 {
 	/* 绘制赛车 */
 	DrawVehicle(vehicle.position, VEHICLE_COLOR);
+
+	Draw_Rect();
+	drawascii168(12, 220, speed, 1, 1, 0xffffff);
 
 	/* 显示圈数与速度*/
 	if (display_flag != 0)
@@ -218,6 +224,26 @@ void DrawVehicle(float p, COLOR c)
 			setpixel(TRACK_CENTRE_X + TRACK_RADIUS * cos(p * PI / 180.0f) + i,
 					 TRACK_CENTRE_Y + TRACK_RADIUS * sin(p * PI / 180.0f) + j,
 					 c);
+		}
+	}
+}
+
+/**
+ * @brief 绘制蓝色矩形方块
+ * 
+ */
+void Draw_Rect(void)
+{
+
+	int i, j;
+
+	for (i = 0; i < SPEED_W; i++)
+	{
+		for (j = 0; j < SPEED_H; j++)
+		{
+			setpixel(SPEED_X + i,
+					 SPEED_Y + j,
+					 0x0000ff);
 		}
 	}
 }

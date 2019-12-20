@@ -20,6 +20,7 @@
 #include "INT.h"
 #include "2410lib.h"
 #include "lcdlib.h"
+#include <stdio.h>
 #include <math.h>
 
 /* Exported types ------------------------------------------------------------*/
@@ -41,6 +42,11 @@ typedef struct
 #define COVER_BUF 0x32000000	  /* 背景图像地址 */
 #define BACKGROUND_BUF 0x31000000 /* 背景图像地址 */
 
+#define SPEED_X 10
+#define SPEED_Y 200
+#define SPEED_W 90
+#define SPEED_H 21
+
 #define TRACK_RADIUS 100	   /* 赛道半径 */
 #define TRACK_CENTRE_X 200.0f  /* 赛道中心横坐标 */
 #define TRACK_CENTRE_Y 120.0f  /* 赛道中心纵坐标 */
@@ -59,6 +65,7 @@ void VehicleDisplays(void);
 void DisplayLED(void);
 void LED_TOGGLE(int flag);
 void VehicleStatusUpdate(void);
+void Draw_Rect(void);
 void DrawTrack(void);
 void DrawVehicle(float p, COLOR c);
 void choose_position(int p, int num, int dot);
