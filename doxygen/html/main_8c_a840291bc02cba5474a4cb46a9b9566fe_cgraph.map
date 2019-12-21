@@ -1,0 +1,19 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8c.html#a93f514700ccf00d08dbdcff7f1224eb2" title="系统初始化 " alt="" coords="134,56,218,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a8004f8f482dbef7f0522b48a579b8b47" title="外设初始化 " alt="" coords="127,107,225,133"/>
+<area shape="rect" id="node4" href="$main_8c.html#a85f4f7afb13dec1233f5cfd2473d5a12" title="中断初始化 " alt="" coords="145,157,207,184"/>
+<area shape="rect" id="node9" href="$main_8c.html#a22ded4a110818b6fb8a72a001ff988ea" title="在LCD上显示成员信息，持续一段时间 " alt="" coords="133,208,219,235"/>
+<area shape="rect" id="node11" href="$vehicle_8c.html#a37b4defbf720b1dc56d488cebe140ba2" title="赛车程序初始化函数 " alt="" coords="135,259,217,285"/>
+<area shape="rect" id="node14" href="$vehicle_8c.html#ae06b8941e180800660bab73ca89bb29c" title="更新赛车数据 " alt="" coords="104,309,248,336"/>
+<area shape="rect" id="node15" href="$vehicle_8c.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="119,360,233,387"/>
+<area shape="rect" id="node5" href="$main_8c.html#a168b12a66c15cec54bd528ee7ed16967" title="中断0使能函数 " alt="" coords="296,5,400,32"/>
+<area shape="rect" id="node6" href="$vehicle_8c.html#a7897534f6b2cf9ec2d72af613e6c100d" title="按键1中断处理函数 每按一次“档位”成员变量自减一 " alt="" coords="299,56,397,83"/>
+<area shape="rect" id="node7" href="$main_8c.html#a8133c22f4d74997b11c8afb973bc8c9f" title="中断2使能函数 " alt="" coords="296,107,400,133"/>
+<area shape="rect" id="node8" href="$vehicle_8c.html#a5d7d4bd8a4ae8dfde93d64d27a492463" title="按键2中断处理函数 每按一次“档位”成员变量自增一 " alt="" coords="299,157,397,184"/>
+<area shape="rect" id="node10" href="$vehicle_8c.html#ad56cd570f598052235ff7111f99c6504" title="简单的延时函数 " alt="" coords="481,284,534,311"/>
+<area shape="rect" id="node12" href="$vehicle_8c.html#a573e3a73f898d8e69dda05e56716723d" title="绘制圆形赛道 " alt="" coords="307,259,389,285"/>
+<area shape="rect" id="node13" href="$vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3" title="绘制赛车，即一个小矩形 " alt="" coords="301,309,395,336"/>
+<area shape="rect" id="node16" href="$vehicle_8c.html#a01f7b1de24a0bfcba4d3fef6345fef99" title="绘制蓝色矩形方块 " alt="" coords="309,360,387,387"/>
+<area shape="rect" id="node17" href="$vehicle_8c.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="301,411,395,437"/>
+<area shape="rect" id="node18" href="$vehicle_8c.html#aaefbc0e26f31cb3185e4126702d08566" title="数码管显示函数 " alt="" coords="448,411,567,437"/>
+</map>

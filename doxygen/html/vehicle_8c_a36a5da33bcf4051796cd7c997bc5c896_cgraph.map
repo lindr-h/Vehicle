@@ -1,0 +1,7 @@
+<map id="VehicleDisplays" name="VehicleDisplays">
+<area shape="rect" id="node2" href="$vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3" title="绘制赛车，即一个小矩形 " alt="" coords="168,5,263,32"/>
+<area shape="rect" id="node3" href="$vehicle_8c.html#a01f7b1de24a0bfcba4d3fef6345fef99" title="绘制蓝色矩形方块 " alt="" coords="176,56,255,83"/>
+<area shape="rect" id="node4" href="$vehicle_8c.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="168,107,263,133"/>
+<area shape="rect" id="node5" href="$vehicle_8c.html#aaefbc0e26f31cb3185e4126702d08566" title="数码管显示函数 " alt="" coords="311,81,429,108"/>
+<area shape="rect" id="node6" href="$vehicle_8c.html#ad56cd570f598052235ff7111f99c6504" title="简单的延时函数 " alt="" coords="343,132,397,159"/>
+</map>
