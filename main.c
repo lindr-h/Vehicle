@@ -21,7 +21,6 @@
  */
 int main(void)
 {
-
 	/* 系统初始化 */
 	SystemInit();
 	PeripheralInit();
