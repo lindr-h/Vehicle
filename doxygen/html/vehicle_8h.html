@@ -65,8 +65,6 @@
 vehicle.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="vehicle_8h__incl.png" border="0" usemap="#vehicle_8h" alt=""/></div>
-<map name="vehicle_8h" id="vehicle_8h">
-</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
@@ -920,11 +918,10 @@ vehicle.h 的引用(Include)关系图:</div>
 
 <p>更新赛车数据 </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd>根据为赛车增加加速度属性值，使得赛车速度切换更加真实 </dd></dl>
-<p>&lt; LED 闪烁计数器</p>
-<p>&lt; LED 当前状态 </p>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> led_counter;              </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> led_status = 0; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> led_counter;              <span class="comment">/* LED 闪烁计数器 */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> led_status = 0; <span class="comment">/* LED 当前状态 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/* 赛车前进 ****************************************************************/</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/* 清除赛车当前位置 */</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a>(<a class="code" href="vehicle_8c.html#a7e67faac7eb0a26632340a79a8f0bf5f">vehicle</a>.<a class="code" href="struct_vehicle.html#a979c2a3e7e4da4a8edc3d4b34dc8d62b">position</a>, 0xffffff);</div>

@@ -45,8 +45,8 @@ void VehicleInit(void)
  */
 void VehicleStatusUpdate(void)
 {
-	static int led_counter;				 /*!< LED 闪烁计数器 */
-	static unsigned char led_status = 0; /*!< LED 当前状态 */
+	static int led_counter;				 /* LED 闪烁计数器 */
+	static unsigned char led_status = 0; /* LED 当前状态 */
 
 	/* 赛车前进 ****************************************************************/
 	/* 清除赛车当前位置 */
