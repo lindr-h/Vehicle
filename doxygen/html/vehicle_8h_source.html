@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Vehicle: E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h 源文件</title>
+<title>Vehicle: vehicle.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">E:/浚小森专用/资料/2-大三/嵌入式/嵌入式汽车模拟控制程序/vehicle.h</div>  </div>
+<div class="title">vehicle.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="vehicle_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
@@ -64,10 +64,10 @@
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* Private typedef -----------------------------------------------------------*/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_vehicle.html">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">   29</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">position</a>;              </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">   30</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a>;         </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">   31</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">laps</a>;          </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">   32</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">gear</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a979c2a3e7e4da4a8edc3d4b34dc8d62b">   29</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vehicle.html#a979c2a3e7e4da4a8edc3d4b34dc8d62b">position</a>;              </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a523997d5c13de311e719ab582f1de4d4">   30</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#a523997d5c13de311e719ab582f1de4d4">speed</a>;         </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a4f89aa17277ad83423164b9dccd8122a">   31</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#a4f89aa17277ad83423164b9dccd8122a">laps</a>;          </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_vehicle.html#a14600e2333dc129b08990be5fad320b4">   32</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_vehicle.html#a14600e2333dc129b08990be5fad320b4">gear</a>; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="struct_vehicle.html">Vehicle</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Private define ------------------------------------------------------------*/</span></div>
@@ -107,29 +107,45 @@
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __VEHICLE_H */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/********************************** END OF FILE *******************************/</span></div>
-<div class="ttc" id="vehicle_8h_html_a36a5da33bcf4051796cd7c997bc5c896"><div class="ttname"><a href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">VehicleDisplays</a></div><div class="ttdeci">void VehicleDisplays(void)</div><div class="ttdoc">显示赛车状态 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00105">vehicle.c:105</a></div></div>
-<div class="ttc" id="struct_vehicle_html"><div class="ttname"><a href="struct_vehicle.html">Vehicle</a></div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00027">vehicle.h:27</a></div></div>
-<div class="ttc" id="vehicle_8h_html_ad56cd570f598052235ff7111f99c6504"><div class="ttname"><a href="vehicle_8h.html#ad56cd570f598052235ff7111f99c6504">delay</a></div><div class="ttdeci">void delay(int time)</div><div class="ttdoc">简单的延时函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00302">vehicle.c:302</a></div></div>
-<div class="ttc" id="struct_vehicle_html_aa8a30effced78923011101bf241c4207"><div class="ttname"><a href="struct_vehicle.html#aa8a30effced78923011101bf241c4207">Vehicle::laps</a></div><div class="ttdeci">unsigned char laps</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00031">vehicle.h:31</a></div></div>
-<div class="ttc" id="vehicle_8h_html_aaefbc0e26f31cb3185e4126702d08566"><div class="ttname"><a href="vehicle_8h.html#aaefbc0e26f31cb3185e4126702d08566">DisplayOneSMG</a></div><div class="ttdeci">void DisplayOneSMG(int p, int num, int dot)</div><div class="ttdoc">数码管显示函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00153">vehicle.c:153</a></div></div>
-<div class="ttc" id="struct_vehicle_html_ab556fea5be6ac67786f2833f89c3b684"><div class="ttname"><a href="struct_vehicle.html#ab556fea5be6ac67786f2833f89c3b684">Vehicle::gear</a></div><div class="ttdeci">volatile unsigned char gear</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00032">vehicle.h:32</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a37b4defbf720b1dc56d488cebe140ba2"><div class="ttname"><a href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">VehicleInit</a></div><div class="ttdeci">void VehicleInit(void)</div><div class="ttdoc">赛车程序初始化函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00028">vehicle.c:28</a></div></div>
-<div class="ttc" id="vehicle_8h_html_ae06b8941e180800660bab73ca89bb29c"><div class="ttname"><a href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">VehicleStatusUpdate</a></div><div class="ttdeci">void VehicleStatusUpdate(void)</div><div class="ttdoc">更新赛车数据 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00046">vehicle.c:46</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a01f7b1de24a0bfcba4d3fef6345fef99"><div class="ttname"><a href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">DrawRect</a></div><div class="ttdeci">void DrawRect(void)</div><div class="ttdoc">绘制蓝色矩形方块 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00253">vehicle.c:253</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a573e3a73f898d8e69dda05e56716723d"><div class="ttname"><a href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">DrawTrack</a></div><div class="ttdeci">void DrawTrack(void)</div><div class="ttdoc">绘制圆形赛道 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00203">vehicle.c:203</a></div></div>
-<div class="ttc" id="struct_vehicle_html_aa4eab0a1ec935e4bbdf16be9c7963f3c"><div class="ttname"><a href="struct_vehicle.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">Vehicle::speed</a></div><div class="ttdeci">unsigned char speed</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00030">vehicle.h:30</a></div></div>
-<div class="ttc" id="vehicle_8h_html_aea5c29b708bb0d72e962b61515fc44b8"><div class="ttname"><a href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8">DisplaySMG</a></div><div class="ttdeci">void DisplaySMG(void)</div><div class="ttdoc">数码管显示函数 在左边两位显示当前已走圈数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00125">vehicle.c:125</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a4fd900a3a7110287db68e11d1fa6d0e3"><div class="ttname"><a href="vehicle_8h.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a></div><div class="ttdeci">void DrawVehicle(float p, COLOR c)</div><div class="ttdoc">绘制赛车，即一个小矩形 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00233">vehicle.c:233</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a7897534f6b2cf9ec2d72af613e6c100d"><div class="ttname"><a href="vehicle_8h.html#a7897534f6b2cf9ec2d72af613e6c100d">INT0_Handler</a></div><div class="ttdeci">void __irq INT0_Handler(void)</div><div class="ttdoc">按键1中断处理函数 每按一次“档位”成员变量自减一 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00287">vehicle.c:287</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a5d7d4bd8a4ae8dfde93d64d27a492463"><div class="ttname"><a href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">INT2_Handler</a></div><div class="ttdeci">void __irq INT2_Handler(void)</div><div class="ttdoc">按键2中断处理函数 每按一次“档位”成员变量自增一 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00273">vehicle.c:273</a></div></div>
-<div class="ttc" id="vehicle_8h_html_a389b4b4f6b01f7d8b5867afaa79be8f0"><div class="ttname"><a href="vehicle_8h.html#a389b4b4f6b01f7d8b5867afaa79be8f0">DisplayLED</a></div><div class="ttdeci">void DisplayLED(int flag)</div><div class="ttdoc">LED 显示函数 </div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8c_source.html#l00184">vehicle.c:184</a></div></div>
-<div class="ttc" id="struct_vehicle_html_a76777b356ab2a080225682528119c4fe"><div class="ttname"><a href="struct_vehicle.html#a76777b356ab2a080225682528119c4fe">Vehicle::position</a></div><div class="ttdeci">float position</div><div class="ttdef"><b>Definition:</b> <a href="vehicle_8h_source.html#l00029">vehicle.h:29</a></div></div>
+<div class="ttc" id="vehicle_8h_html_a36a5da33bcf4051796cd7c997bc5c896"><div class="ttname"><a href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">VehicleDisplays</a></div><div class="ttdeci">void VehicleDisplays(void)</div><div class="ttdoc">显示赛车状态 </div><div class="ttdef"><b>Definition:</b> vehicle.c:105</div></div>
+<div class="ttc" id="struct_vehicle_html"><div class="ttname"><a href="struct_vehicle.html">Vehicle</a></div><div class="ttdef"><b>Definition:</b> vehicle.h:27</div></div>
+<div class="ttc" id="struct_vehicle_html_a523997d5c13de311e719ab582f1de4d4"><div class="ttname"><a href="struct_vehicle.html#a523997d5c13de311e719ab582f1de4d4">Vehicle::speed</a></div><div class="ttdeci">unsigned char speed</div><div class="ttdef"><b>Definition:</b> vehicle.h:30</div></div>
+<div class="ttc" id="vehicle_8h_html_ad56cd570f598052235ff7111f99c6504"><div class="ttname"><a href="vehicle_8h.html#ad56cd570f598052235ff7111f99c6504">delay</a></div><div class="ttdeci">void delay(int time)</div><div class="ttdoc">简单的延时函数 </div><div class="ttdef"><b>Definition:</b> vehicle.c:302</div></div>
+<div class="ttc" id="vehicle_8h_html_aaefbc0e26f31cb3185e4126702d08566"><div class="ttname"><a href="vehicle_8h.html#aaefbc0e26f31cb3185e4126702d08566">DisplayOneSMG</a></div><div class="ttdeci">void DisplayOneSMG(int p, int num, int dot)</div><div class="ttdoc">数码管显示函数 </div><div class="ttdef"><b>Definition:</b> vehicle.c:153</div></div>
+<div class="ttc" id="struct_vehicle_html_a979c2a3e7e4da4a8edc3d4b34dc8d62b"><div class="ttname"><a href="struct_vehicle.html#a979c2a3e7e4da4a8edc3d4b34dc8d62b">Vehicle::position</a></div><div class="ttdeci">float position</div><div class="ttdef"><b>Definition:</b> vehicle.h:29</div></div>
+<div class="ttc" id="struct_vehicle_html_a14600e2333dc129b08990be5fad320b4"><div class="ttname"><a href="struct_vehicle.html#a14600e2333dc129b08990be5fad320b4">Vehicle::gear</a></div><div class="ttdeci">volatile unsigned char gear</div><div class="ttdef"><b>Definition:</b> vehicle.h:32</div></div>
+<div class="ttc" id="vehicle_8h_html_a37b4defbf720b1dc56d488cebe140ba2"><div class="ttname"><a href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">VehicleInit</a></div><div class="ttdeci">void VehicleInit(void)</div><div class="ttdoc">赛车程序初始化函数 </div><div class="ttdef"><b>Definition:</b> vehicle.c:28</div></div>
+<div class="ttc" id="vehicle_8h_html_ae06b8941e180800660bab73ca89bb29c"><div class="ttname"><a href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">VehicleStatusUpdate</a></div><div class="ttdeci">void VehicleStatusUpdate(void)</div><div class="ttdoc">更新赛车数据 </div><div class="ttdef"><b>Definition:</b> vehicle.c:46</div></div>
+<div class="ttc" id="vehicle_8h_html_a01f7b1de24a0bfcba4d3fef6345fef99"><div class="ttname"><a href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">DrawRect</a></div><div class="ttdeci">void DrawRect(void)</div><div class="ttdoc">绘制蓝色矩形方块 </div><div class="ttdef"><b>Definition:</b> vehicle.c:253</div></div>
+<div class="ttc" id="vehicle_8h_html_a573e3a73f898d8e69dda05e56716723d"><div class="ttname"><a href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">DrawTrack</a></div><div class="ttdeci">void DrawTrack(void)</div><div class="ttdoc">绘制圆形赛道 </div><div class="ttdef"><b>Definition:</b> vehicle.c:203</div></div>
+<div class="ttc" id="vehicle_8h_html_aea5c29b708bb0d72e962b61515fc44b8"><div class="ttname"><a href="vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8">DisplaySMG</a></div><div class="ttdeci">void DisplaySMG(void)</div><div class="ttdoc">数码管显示函数 在左边两位显示当前已走圈数 </div><div class="ttdef"><b>Definition:</b> vehicle.c:125</div></div>
+<div class="ttc" id="struct_vehicle_html_a4f89aa17277ad83423164b9dccd8122a"><div class="ttname"><a href="struct_vehicle.html#a4f89aa17277ad83423164b9dccd8122a">Vehicle::laps</a></div><div class="ttdeci">unsigned char laps</div><div class="ttdef"><b>Definition:</b> vehicle.h:31</div></div>
+<div class="ttc" id="vehicle_8h_html_a4fd900a3a7110287db68e11d1fa6d0e3"><div class="ttname"><a href="vehicle_8h.html#a4fd900a3a7110287db68e11d1fa6d0e3">DrawVehicle</a></div><div class="ttdeci">void DrawVehicle(float p, COLOR c)</div><div class="ttdoc">绘制赛车，即一个小矩形 </div><div class="ttdef"><b>Definition:</b> vehicle.c:233</div></div>
+<div class="ttc" id="vehicle_8h_html_a7897534f6b2cf9ec2d72af613e6c100d"><div class="ttname"><a href="vehicle_8h.html#a7897534f6b2cf9ec2d72af613e6c100d">INT0_Handler</a></div><div class="ttdeci">void __irq INT0_Handler(void)</div><div class="ttdoc">按键1中断处理函数 每按一次“档位”成员变量自减一 </div><div class="ttdef"><b>Definition:</b> vehicle.c:287</div></div>
+<div class="ttc" id="vehicle_8h_html_a5d7d4bd8a4ae8dfde93d64d27a492463"><div class="ttname"><a href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">INT2_Handler</a></div><div class="ttdeci">void __irq INT2_Handler(void)</div><div class="ttdoc">按键2中断处理函数 每按一次“档位”成员变量自增一 </div><div class="ttdef"><b>Definition:</b> vehicle.c:273</div></div>
+<div class="ttc" id="vehicle_8h_html_a389b4b4f6b01f7d8b5867afaa79be8f0"><div class="ttname"><a href="vehicle_8h.html#a389b4b4f6b01f7d8b5867afaa79be8f0">DisplayLED</a></div><div class="ttdeci">void DisplayLED(int flag)</div><div class="ttdoc">LED 显示函数 </div><div class="ttdef"><b>Definition:</b> vehicle.c:184</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-生成于 2019年 十二月 21日 星期六 01:47:45 , 为 Vehicle使用  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            padding-bottom: 50px;
+        }
+        .footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 35px;
+            background-color: #eee;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer"> Posted by: Gump JunSen, LDR </div>
 </body>
-</html>

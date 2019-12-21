@@ -55,6 +55,7 @@
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
@@ -63,7 +64,7 @@
   </div>
 </div><!-- top -->
 <div class="contents">
-<div class="textblock">这里列出了所有文档化的函数,变量,宏,枚举和类型定义等,并附带其详细说明:</div>
+<div class="textblock">这里列出了所有函数,变量,宏,枚举和类型定义等,并附带其所属的文件:</div>
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>BACKGROUND_BUF
@@ -104,8 +105,8 @@
 , <a class="el" href="vehicle_8h.html#a01f7b1de24a0bfcba4d3fef6345fef99">vehicle.h</a>
 </li>
 <li>DrawTrack()
-: <a class="el" href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">vehicle.h</a>
-, <a class="el" href="vehicle_8c.html#a573e3a73f898d8e69dda05e56716723d">vehicle.c</a>
+: <a class="el" href="vehicle_8c.html#a573e3a73f898d8e69dda05e56716723d">vehicle.c</a>
+, <a class="el" href="vehicle_8h.html#a573e3a73f898d8e69dda05e56716723d">vehicle.h</a>
 </li>
 <li>DrawVehicle()
 : <a class="el" href="vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3">vehicle.c</a>
@@ -120,12 +121,12 @@
 , <a class="el" href="main_8h.html#a168b12a66c15cec54bd528ee7ed16967">main.h</a>
 </li>
 <li>EINT2_Enable()
-: <a class="el" href="main_8h.html#a8133c22f4d74997b11c8afb973bc8c9f">main.h</a>
-, <a class="el" href="main_8c.html#a8133c22f4d74997b11c8afb973bc8c9f">main.c</a>
+: <a class="el" href="main_8c.html#a8133c22f4d74997b11c8afb973bc8c9f">main.c</a>
+, <a class="el" href="main_8h.html#a8133c22f4d74997b11c8afb973bc8c9f">main.h</a>
 </li>
 <li>ExitInit()
-: <a class="el" href="main_8h.html#a85f4f7afb13dec1233f5cfd2473d5a12">main.h</a>
-, <a class="el" href="main_8c.html#a85f4f7afb13dec1233f5cfd2473d5a12">main.c</a>
+: <a class="el" href="main_8c.html#a85f4f7afb13dec1233f5cfd2473d5a12">main.c</a>
+, <a class="el" href="main_8h.html#a85f4f7afb13dec1233f5cfd2473d5a12">main.h</a>
 </li>
 </ul>
 
@@ -138,6 +139,13 @@
 <li>INT2_Handler()
 : <a class="el" href="vehicle_8c.html#a5d7d4bd8a4ae8dfde93d64d27a492463">vehicle.c</a>
 , <a class="el" href="vehicle_8h.html#a5d7d4bd8a4ae8dfde93d64d27a492463">vehicle.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main.c</a>
 </li>
 </ul>
 
@@ -214,20 +222,36 @@
 , <a class="el" href="vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896">vehicle.h</a>
 </li>
 <li>VehicleInit()
-: <a class="el" href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">vehicle.h</a>
-, <a class="el" href="vehicle_8c.html#a37b4defbf720b1dc56d488cebe140ba2">vehicle.c</a>
+: <a class="el" href="vehicle_8c.html#a37b4defbf720b1dc56d488cebe140ba2">vehicle.c</a>
+, <a class="el" href="vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2">vehicle.h</a>
 </li>
 <li>VehicleStatusUpdate()
-: <a class="el" href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">vehicle.h</a>
-, <a class="el" href="vehicle_8c.html#ae06b8941e180800660bab73ca89bb29c">vehicle.c</a>
+: <a class="el" href="vehicle_8c.html#ae06b8941e180800660bab73ca89bb29c">vehicle.c</a>
+, <a class="el" href="vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c">vehicle.h</a>
 </li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-生成于 2019年 十二月 21日 星期六 01:47:46 , 为 Vehicle使用  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            padding-bottom: 50px;
+        }
+        .footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 35px;
+            background-color: #eee;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer"> Posted by: Gump JunSen, LDR </div>
 </body>
-</html>

@@ -1,0 +1,4 @@
+<map id="VehicleInit" name="VehicleInit">
+<area shape="rect" id="node2" href="$vehicle_8c.html#a573e3a73f898d8e69dda05e56716723d" title="绘制圆形赛道 " alt="" coords="142,5,225,32"/>
+<area shape="rect" id="node3" href="$vehicle_8c.html#a4fd900a3a7110287db68e11d1fa6d0e3" title="绘制赛车，即一个小矩形 " alt="" coords="136,56,231,83"/>
+</map>
