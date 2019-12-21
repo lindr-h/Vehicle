@@ -1,4 +1,4 @@
 <map id="EINT0_Enable" name="EINT0_Enable">
 <area shape="rect" id="node2" href="$main_8h.html#a85f4f7afb13dec1233f5cfd2473d5a12" title="中断初始化 " alt="" coords="157,5,220,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="268,5,319,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="程序主函数 " alt="" coords="268,5,319,32"/>
 </map>

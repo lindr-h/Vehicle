@@ -20,7 +20,6 @@ char speed[10];					/*!< LCD 左上角显示的当前速度 */
 unsigned char display_flag = 0; /*!< 显示控制标志 */
 
 /* Private functions ---------------------------------------------------------*/
-
 /**
  * @brief 赛车程序初始化函数
  * 
@@ -85,9 +84,11 @@ void VehicleStatusUpdate(void)
 	if (led_counter < (4 - vehicle.gear) * 3)
 	{
 		led_counter++;
+
 		/* LED显示 */
 		LED_Display(led_status);
-	} /* 计数完成时 */
+	}
+	/* 计数完成时 */
 	else if (led_counter >= (4 - vehicle.gear) * 3)
 	{
 		/* 计数器清零 */

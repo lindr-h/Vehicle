@@ -1,6 +1,6 @@
 @mainpage
 
-# Vehicle
+# Vehicle 嵌入式赛车模拟控制程序
 [项目介绍主页](https://gorgeous2017.github.io/Vehicle)
 
 ## 说明文档

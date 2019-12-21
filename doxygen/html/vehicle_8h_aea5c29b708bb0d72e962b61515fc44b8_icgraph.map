@@ -1,4 +1,4 @@
 <map id="DisplaySMG" name="DisplaySMG">
 <area shape="rect" id="node2" href="$vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="148,5,263,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="311,5,361,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="程序主函数 " alt="" coords="311,5,361,32"/>
 </map>
