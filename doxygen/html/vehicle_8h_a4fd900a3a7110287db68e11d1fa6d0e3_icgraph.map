@@ -1,0 +1,6 @@
+<map id="DrawVehicle" name="DrawVehicle">
+<area shape="rect" id="node2" href="$vehicle_8h.html#a37b4defbf720b1dc56d488cebe140ba2" title="赛车程序初始化函数 " alt="" coords="179,5,261,32"/>
+<area shape="rect" id="node4" href="$vehicle_8h.html#ae06b8941e180800660bab73ca89bb29c" title="更新赛车数据 " alt="" coords="148,56,292,83"/>
+<area shape="rect" id="node5" href="$vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="163,107,277,133"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="程序主函数 " alt="" coords="340,56,391,83"/>
+</map>

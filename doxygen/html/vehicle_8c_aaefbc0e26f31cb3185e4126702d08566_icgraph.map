@@ -1,0 +1,5 @@
+<map id="DisplayOneSMG" name="DisplayOneSMG">
+<area shape="rect" id="node2" href="$vehicle_8h.html#aea5c29b708bb0d72e962b61515fc44b8" title="数码管显示函数 在左边两位显示当前已走圈数 " alt="" coords="172,5,267,32"/>
+<area shape="rect" id="node3" href="$vehicle_8h.html#a36a5da33bcf4051796cd7c997bc5c896" title="显示赛车状态 " alt="" coords="315,5,429,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="程序主函数 " alt="" coords="477,5,528,32"/>
+</map>
